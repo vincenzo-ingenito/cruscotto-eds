@@ -1,0 +1,53 @@
+#############################################################################
+# TC - RICERCA PAZIENTI RISPETTO AI PARAMETRI
+#EXPECTED: 200 OK
+#############################################################################
+# @name CERT_VACC
+POST {{$dotenv GTW_FHIR_MAPPING_ENGINE}}/v1/documents/transform/stateless/69a1a17729824d93aed27f9e/68ed2686157e005efe65df28
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="CERT_VACC_1.xml"
+Content-Type: application/xml
+
+< ./test/CERT_VACC_1.xml
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# @name VPS
+POST {{$dotenv GTW_FHIR_MAPPING_ENGINE}}/v1/documents/transform/stateless/69a1a17729824d93aed27f9e/6929766e3ac0ff68637a6d88
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="VPS.xml"
+Content-Type: application/xml
+
+< ./test/VPS.xml
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# @name PSS
+POST {{$dotenv GTW_FHIR_MAPPING_ENGINE}}/v1/documents/transform/stateless/69a1a17729824d93aed27f9e/6929766a3ac0ff68637a6d87
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="PSS.xml"
+Content-Type: application/xml
+
+< ./test/PSS.xml
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+#############################################################################
+# @name LAB
+POST {{$dotenv GTW_FHIR_MAPPING_ENGINE}}/v1/documents/transform/stateless/69a1a17729824d93aed27f9e/6970fc360d20a1659f37b72e
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="LAB.xml"
+Content-Type: application/xml
+
+< ./test/LAB.xml
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+

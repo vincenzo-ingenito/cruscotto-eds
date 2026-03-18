@@ -1,0 +1,398 @@
+#############################################################################
+# 1.TC - PUBBLICAZIONE DOCUMENTO CERT_VACC
+#############################################################################
+
+#############################################################################
+# 1. Creazione di random masterIdentifier
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_cert_vacc={{uuid.response.body.*}}
+@masterIdentifier_cert_vacc = {{system}}^{{uuid_cert_vacc}}
+
+#############################################################################
+# 1.2. Validazione Documento CERT_VACC
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_1.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/CERT_VACC_1.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 1.3. Pubblicazione Documento CERT_VACC
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "WOR",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_cert_vacc}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_1.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/CERT_VACC_1.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 1.4. Recupero DocumentReference con paziente cryptato
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_cert_vacc}}&_include=DocumentReference:subject
+Cache-Control: no-cache
+
+#############################################################################
+# 2.TC - PUBBLICAZIONE DOCUMENTO EROGAZIONE FARMACEUTICA
+#############################################################################
+
+#############################################################################
+# 2. Creazione di random masterIdentifier
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_er_fr={{uuid.response.body.*}}
+@masterIdentifier_er_fr = {{system}}^{{uuid_er_fr}}
+
+#############################################################################
+# 2.1 Validazione Documento EROG_FR
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/ErogazioneFr.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/ErogazioneFr.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 2.2. Pubblicazione Documento Erogazione Farmaceutica
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "WOR",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_er_fr}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/ErogazioneFr.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/ErogazioneFr.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 2.3. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_er_fr}}&_include=DocumentReference:subject
+Cache-Control: no-cache
+
+#############################################################################
+# 3.TC - PUBBLICAZIONE DOCUMENTO LAB
+#############################################################################
+
+#############################################################################
+# 3. Creazione di random masterIdentifier
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_lab={{uuid.response.body.*}}
+@masterIdentifier_lab = {{system}}^{{uuid_lab}}
+
+#############################################################################
+# 3.1 Validazione Documento LAB
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/LAB.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/LAB.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 3.2. Pubblicazione Documento LAB.pdf
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "WOR",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_lab}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/LAB.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/LAB.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+  
+#############################################################################
+# 3.4. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_lab}}&_include=DocumentReference:subject
+Cache-Control: no-cache
+
+#############################################################################
+# 4.TC - PUBBLICAZIONE DOCUMENTO PSS
+#############################################################################
+#############################################################################
+# 4. Creazione di random masterIdentifier
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_pss={{uuid.response.body.*}}
+@masterIdentifier_pss={{system}}^{{uuid_pss}}
+
+#############################################################################
+# 4.1 Validazione Documento PSS
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/PSS.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/PSS.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 4.2. Pubblicazione Documento PSS.pdf
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "WOR",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_pss}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/PSS.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/PSS.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+  
+#############################################################################
+# 4.4. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_pss}}&_include=DocumentReference:subject
+Cache-Control: no-cache
+
+#############################################################################
+# 5.TC - PUBBLICAZIONE DOCUMENTO VPS
+#############################################################################
+
+#############################################################################
+# 5. Creazione di random masterIdentifier
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_vps={{uuid.response.body.*}}
+@masterIdentifier_vps = {{system}}^{{uuid_vps}}
+
+#############################################################################
+# 5.1 Validazione Documento VPS
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/VPS.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/VPS.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 5.2. Pubblicazione Documento VPS.pdf
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "WOR",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_vps}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/VPS.pdf" 
+Content-Type: application/octet-stream
+
+< ./FILES/VPS.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 5.4. Recupero DocumentReference con paziente cryptato sul Server FHIR CAMPANIA
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_vps}}&_include=DocumentReference:subject
+Cache-Control: no-cache

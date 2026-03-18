@@ -1,0 +1,156 @@
+### Variabili
+
+@jwt_sub_eq_persid=eyJ4NWMiOlsiTUlJRmRqQ0NBMTZnQXdJQkFnSVVOL2JGaVpya292OVB3ZkVPY3pXVG1yaUFPWU13RFFZSktvWklodmNOQVFFTEJRQXdWekVuTUNVR0ExVUVBd3dlUTBFZ1RXbHVhWE4wWlhKdklHUmxiR3hoSUZOaGJIVjBaU0JVWlhOME1SOHdIUVlEVlFRS0RCWk5hVzVwYzNSbGNtOGdaR1ZzYkdFZ1UyRnNkWFJsTVFzd0NRWURWUVFHRXdKSlZEQWVGdzB5TmpBeU1Ua3hOekl3TXpkYUZ3MHlPVEF5TVRreE56SXdNelphTUhjeEN6QUpCZ05WQkFZVEFrbFVNUjh3SFFZRFZRUUtEQlpOYVc1cGMzUmxjbThnWkdWc2JHRWdVMkZzZFhSbE1SOHdIUVlEVlFSaERCWkRSanBKVkMxUVVrOVdRVmd3TUZnd01GZ3dNREJaTVNZd0pBWURWUVFEREIxVE1TTXhNVEVqVkVWVFZDMUZSRk10UTI5dWMzVnNkR0Y2YVc5dVpUQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQQURDQ0FRb0NnZ0VCQUxpZnhpUlExRlpxZmJPN1FKajlVL0NjUy90THVwYUIwUVJJOHpWMVAyU1pNeXFBc1RwMnB0TWxjK2I4Rnp5YlVXT2lFNmZ4bXZ5V1VCeSt4TnlFMk8zS2FvakE4OGxCUkxJV004eWRobERLUllYb2g2RnZZTmhEV0xjNjhHQjV2QWZrTnZzdTJJUVUveFg5S0UvcURCUTZNc2R3V3E2MHY0dFF1WDY0NDJRMDFzbURWZnZYL1pCcUFFUzNTdzhUWnpwSVBuUTlyeW9Idi91WFZiMEtRM1Z1NS9WaG8wS3Z5NXRUVkZnYmo2bGlFbFNwc2hIamxmdkN1REZSVjRFTlorOTJ0VWFmOWJNU0JQTHlTUEQ3RkpqQXFpSllNMlpBYzlrVkZWaTh6cVhSRitmUEQxSWt3dXY3MlhtV3I3TklKN2tjbXVKaDlEdDk0TUxFeEIweHRWVUNBd0VBQWFPQ0FSZ3dnZ0VVTUI4R0ExVWRJd1FZTUJhQUZCWTVxUm9GaWJjUExiSTE3Y0lKbXNVRGd5SS9NQklHQTFVZElBUUxNQWt3QndZRkswd2RBU0F3Z2EwR0ExVWRId1NCcFRDQm9qQ0JuNkNCbktDQm1ZYUJsbWgwZEhCek9pOHZZMkZ6YjJkbGFYTjJhV3d1YzI5blpXa3VhWFF2WldwaVkyRXZjSFZpYkdsamQyVmlMM2RsWW1ScGMzUXZZMlZ5ZEdScGMzUS9ZMjFrUFdOeWJDWnBjM04xWlhJOVEwNGxNMFJEUVN0TmFXNXBjM1JsY204clpHVnNiR0VyVTJGc2RYUmxLMVJsYzNRbE1rTlBKVE5FVFdsdWFYTjBaWEp2SzJSbGJHeGhLMU5oYkhWMFpTVXlRME1sTTBSSlZEQWRCZ05WSFE0RUZnUVVJTEhJUHZhUE9kWHptSm1XTkMyelM5eDNFZ1l3RGdZRFZSMFBBUUgvQkFRREFnWkFNQTBHQ1NxR1NJYjNEUUVCQ3dVQUE0SUNBUUJMckdaamRiRzQxSzd4Z1dvTDBqa1Ywb1BGSnZWekprVjRsUngyd1I0dDcydTcxWnJMcU9sY0VpemlnNHgvbXprQk5ZNWd6NjZvV0RNOTUwU2hDYmxKTEVSUkRpY1VHTUxseThpOFhXd3ZiU2U0Y1FtOFMxTnhMVVRwWlJRZTJzeGs5aXBhK2NBNXVwZ1FSVHBZMjRyaFptZjVZTFlRdGFXN1I0S29wbTZFRFRPQlJqbEhWcDhaeUFjbEE5SU5jc0ljNTdUbEJ3Qk9sbDJWbDdwMFQrWTNQa1AxVnFVWkJWR2RjMHUwMk9iTFlIckkrNTBreGVTaGtsdVZGWHFCOUc0UmtydEpBbDFsRGRuUGdubzVtNms2SEFnQVZlNGtrK3NSNmFMZkplOVFrNy93SXhUQTMxMTRaUFJOVklUZjRONkRObEFVWGt6ZkE5M2kvQ2t4a2FjYjJrTmp6YVo2VnFvZlFGQkJqY252aGVGTTNoREhJQ0N1aVV4WVRxT2FkUzJzYU0vQ1Nkai9LVGYrbDFEVzhTbGhzQTF4U0xVdVBiTFo1MElWTFVZRnVrWDhKYXpRQVZFZTNKWnZWdldpS09DcG4rTUhqYUs0YWd6Q2lNUjZzMGRKRmFKRjY2NXJjZm05RTlUKzFjYlU1YUsyQzMxZVRTVm5BeWE1bHoyZVVHbHMwU3hHNGZ3eHo2OElySU53M0Nla3RkMkV3cGdEQ3lTSnRlTDlXbm12U1l1ZDU4RUx1OVlDMXhPSUtzam9IcDBKcTE3KzNrc0xGM0kxQkpwUldVV005bHdtVkhrUWp4YkRGKzRoR2pQTm5wbVFJRnNjRHF1WG1vbGlmSCtMb3B0OHdwdjluTmJhMktjQzA2UEIxWFVjem9Pd0VGQnJDOFliSjFWWXlSNHAzdz09Il0sInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJQUk9WQVgwMFgwMFgwMDBZIiwic3ViamVjdF9yb2xlIjoiQVNTIiwiYXVkIjoiaHR0cHM6Ly9tb2RpcGEtdmFsLmZzZS5zYWx1dGUuZ292Lml0L2dvdndheS9yZXN0L2luL0ZTRS9lZHNjb3JlL3YxIiwiaXNzIjoiaW50ZWdyaXR5OlMxIzExMSNURVNULUVEUy1Db25zdWx0YXppb25lIiwiZXhwIjoxNzczODI2OTA0LCJpYXQiOjE3NzM3NDA1MDQsImp0aSI6IjEyMzQiLCJwZXJzb25faWQiOiJQUk9WQVgwMFgwMFgwMDBZIn0.TtcGHQdS-RyT4dobjnoZhDokqZfZmK9dErdEscsTcUCQTk-BW9fkCaNLPOmtndi6c03WAphPH9KzmQldn7Oh-DRD8d7ATcPRV8MWFAxjE4I-zJEmJwQJmyCv_2YtbPkZs4_ZjfICzHTX7ZRz8o2VYqmyN0ge-YMcD6fImlfahI5sBenacvec0ZIzr3L98aHh94c46NO6Sw9_LPFFkWlgibxA-v1YfrvybaVAnGKiDUWLY87y8qbwosZ5ZC_u-Y8t1K6rhNR9w_WlqFbPRF400Xu3066GJJfLXlNtDdlVpN1BI9msHyCUajsFvxTKBV8kMGwIOi0owaeM73qNWqNGSw
+
+#############################################################################
+# 1.1. AUTOCOMPLETE
+# Expected: 1 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=Glu
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+#############################################################################
+# 1.2. AUTOCOMPLETE
+# Expected: 0 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=Testodiprova
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+#############################################################################
+# 1.3. AUTOCOMPLETE
+# Expected: 1 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=res
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+###############################################################################
+# PACCHETTI
+###############################################################################
+### 11. Pacchetto Base - Recupera dati medici essenziali del paziente
+GET {{$dotenv BFF}}/v1/assistito/pacchetto/base?resultType=ALL_RESULT&dateStart=2021-01-01&dateEnd=2024-12-31
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 11a. Pacchetto Base con filtro date
+# GET {{baseUrl}}/v1/assistito/pacchetto/base?resultType=ALL_RESULT&dateStart=2024-01-01&dateEnd=2024-12-31
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 12. Pacchetto Parametri Vitali - Recupera parametri vitali del paziente
+GET {{$dotenv BFF}}/v1/assistito/pacchetto/parametri-vitali?resultType=FIRST_RESULT
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 12a. Pacchetto Parametri Vitali con filtro date
+# GET {{baseUrl}}/v1/assistito/pacchetto/parametri-vitali?resultType=ALL_RESULT&dateStart=2024-01-01&dateEnd=2024-12-31
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+###############################################################################
+# ALLERGIE
+###############################################################################
+### 3. Allergie Assistito - Recupera allergie del paziente
+GET {{$dotenv BFF}}/v1/assistito/allergie
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 3a. Allergie Assistito con parametri opzionali
+# GET {{baseUrl}}/v1/assistito/allergie?count=10
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 4. Allergie Professionista - Recupera allergie del paziente (professionista)
+GET {{$dotenv BFF}}/v1/professionista/allergie
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 4a. Allergie Professionista con parametri opzionali
+# GET {{baseUrl}}/v1/professionista/allergie?count=10
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+###############################################################################
+# DIAGNOSI
+###############################################################################
+
+### 5. Diagnosi Professionista - Recupera diagnosi del paziente
+GET {{$dotenv BFF}}/v1/professionista/diagnosi?count=10&offset=0
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 5a. Diagnosi Professionista con filtro date
+# GET {{baseUrl}}/v1/professionista/diagnosi?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+###############################################################################
+# FARMACI
+###############################################################################
+
+### 6. Farmaci Assistito - Recupera farmaci del paziente
+GET {{$dotenv BFF}}/v1/assistito/farmaci?dateStart=2024-01-01&dateEnd=2024-03-31&sort=ASC&column=data-prescrizione
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 6a. Farmaci Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/farmaci?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC&column=dispensationDate
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 7. Farmaci Professionista - Recupera farmaci del paziente (professionista)
+GET {{$dotenv BFF}}/v1/professionista/farmaci?dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC&column=prescriptionDate
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 7a. Farmaci Professionista con paginazione e colonna diversa
+# Colonne disponibili: prescriptionDate, dispensationDate, administrationDate, expirationDate
+# GET {{baseUrl}}/v1/professionista/farmaci?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC&column=expirationDate
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+###############################################################################
+# EVENTI SANITARI
+###############################################################################
+
+### 8. Eventi Assistito - Recupera eventi sanitari del paziente
+GET {{$dotenv BFF}}/v1/assistito/eventi?dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 8a. Eventi Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/eventi?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+###############################################################################
+# DATI / OSSERVAZIONI
+###############################################################################
+
+### 9. Dati Assistito - Recupera osservazioni del paziente
+GET {{$dotenv BFF}}/v1/assistito/dati?name=Glucosio&dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 9a. Dati Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/dati?name=Glicemia&count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 10. Dati Professionista - Recupera osservazioni del paziente (professionista)
+GET {{$dotenv BFF}}/v1/professionista/dati?name=Pressione Arteriosa&type=Dato&dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 10a. Dati Professionista con paginazione
+# GET {{baseUrl}}/v1/professionista/dati?name=Glicemia&type=Profilo clinico&count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+

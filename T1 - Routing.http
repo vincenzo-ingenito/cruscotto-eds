@@ -1,0 +1,64 @@
+#############################################################################
+# CENSIMENTO SERVER FHIR SASN/CENTRALE
+#############################################################################
+POST {{$dotenv BROKER}}/v1/routing-config
+accept: application/fhir+json
+content-type: application/fhir+json
+
+{ 
+  "region_code": "001",
+  "region_description": "SASN",
+  "uar_server_fhir_url": "http://it-fse-datarepo-uar-fhir-server-001.eds-ms-val.svc.cluster.local:8080/fhir",
+  "uar_url": "https://it-fse-srv-uar-dispatcher-eds-ms-val.apps.ocp6v.cnt.sogei.it",
+  "gateway_url": "https://it-fse-gtw-dispatcher-fse-gtw-ms-ocp2val.apps.ocp2v.cnt.sogei.it"
+}
+
+#############################################################################
+# CENSIMENTO SERVER FHIR REGIONE CAMPANIA
+#############################################################################
+POST {{$dotenv BROKER}}/v1/routing-config
+accept: application/fhir+json
+content-type: application/fhir+json
+
+{ 
+  "region_code": "150",
+  "region_description": "Regione Campania",
+  "uar_server_fhir_url": "http://it-fse-datarepo-uar-fhir-server-150.eds-ms-val.svc.cluster.local:8080/fhir",
+  "uar_url": "https://it-fse-srv-uar-dispatcher-eds-ms-val.apps.ocp6v.cnt.sogei.it",
+  "gateway_url": "https://it-fse-gtw-dispatcher-fse-gtw-ms-ocp2val.apps.ocp2v.cnt.sogei.it"
+}
+
+#############################################################################
+# CENSIMENTO SERVER FHIR REGIONE LAZIO
+#############################################################################
+POST {{$dotenv BROKER}}/v1/routing-config
+accept: application/fhir+json
+content-type: application/fhir+json
+
+{ 
+  "region_code": "120",
+  "region_description": "Regione Lazio",
+  "uar_server_fhir_url": "http://it-fse-datarepo-uar-fhir-server-120.eds-ms-val.svc.cluster.local:8080/fhir",
+  "uar_url": "https://it-fse-srv-uar-dispatcher-eds-ms-val.apps.ocp6v.cnt.sogei.it",
+  "gateway_url": "https://it-fse-gtw-dispatcher-fse-gtw-ms-ocp2val.apps.ocp2v.cnt.sogei.it"
+}
+
+#############################################################################
+# CENSIMENTO SERVER FHIR REGIONE PIEMONTE
+#############################################################################
+POST {{$dotenv BROKER}}/v1/routing-config
+accept: application/fhir+json
+content-type: application/fhir+json
+
+{ 
+  "region_code": "010",
+  "region_description": "Regione Piemonte",
+  "uar_server_fhir_url": "http://it-fse-datarepo-uar-fhir-server-010.eds-ms-val.svc.cluster.local:8080/fhir",
+  "uar_url": "https://it-fse-srv-uar-dispatcher-eds-ms-val.apps.ocp6v.cnt.sogei.it",
+  "gateway_url": "https://it-fse-gtw-dispatcher-fse-gtw-ms-ocp2val.apps.ocp2v.cnt.sogei.it"
+}
+
+#############################################################################
+# List Server
+#############################################################################
+GET {{$dotenv BROKER}}/v1/routing-config

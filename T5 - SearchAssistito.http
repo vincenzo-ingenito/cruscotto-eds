@@ -1,0 +1,146 @@
+###############################################################################
+#                               CRUSCOTTO DI SINTESI
+###############################################################################
+###############################################################################
+# PACCHETTI
+###############################################################################
+#############################################################################
+# 1. Pacchetto Base - Recupera dati medici essenziali del paziente
+#############################################################################
+GET {{$dotenv BFF}}/v1/assistito/pacchetto/base?resultType=ALL_RESULT&dateStart=2021-01-01&dateEnd=2026-12-31
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+ 
+#############################################################################
+# 1.2. Pacchetto Base - Recupera Parametri Vitali del paziente
+#############################################################################
+GET {{$dotenv BFF}}/v1/assistito/pacchetto/parametri-vitali?resultType=ALL_RESULT&dateStart=2021-01-01&dateEnd=2026-12-31
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+###############################################################################
+#                              RICERCA DATI
+###############################################################################
+#############################################################################
+# AUTOCOMPLETE
+#############################################################################
+#############################################################################
+# 1.1. AUTOCOMPLETE
+# Expected: 1 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=Glu
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+#############################################################################
+# 1.2. AUTOCOMPLETE
+# Expected: 0 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=Testodiprova
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+#############################################################################
+# 1.3. AUTOCOMPLETE
+# Expected: 1 result
+#############################################################################
+GET {{$dotenv BFF}}/v1/autocomplete?query=res
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+###############################################################################
+# 1.4 RICERCA OBSERVATION
+###############################################################################
+GET {{$dotenv BFF}}/v1/assistito/dati?name=Glucosio&dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+###############################################################################
+#                                   EVENTI 
+###############################################################################
+#############################################################################
+# Eventi Assistito - Recupera eventi sanitari del paziente
+#############################################################################
+GET {{$dotenv BFF}}/v1/assistito/eventi?dateStart=2023-01-01&dateEnd=2023-12-31&sort=ASC&offset=10&count=10
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+#############################################################################
+GET {{$dotenv BFF}}/v1/assistito/eventi?dateStart=2026-01-01&dateEnd=2026-12-31&sort=ASC&offset=10&count=10
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+###############################################################################
+#                                   ALLERGIE
+###############################################################################
+### 3. Allergie Assistito - Recupera allergie del paziente
+GET {{$dotenv BFF}}/v1/assistito/allergie
+Agid-JWT-Signature: {{$dotenv SEARCH_SUB_EQ_PERSID}}
+Content-Type: application/json
+
+###############################################################################
+# DIAGNOSI
+###############################################################################
+
+### 5. Diagnosi Professionista - Recupera diagnosi del paziente
+GET {{$dotenv BFF}}/v1/professionista/diagnosi?count=10&offset=0
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 5a. Diagnosi Professionista con filtro date
+# GET {{baseUrl}}/v1/professionista/diagnosi?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+###############################################################################
+# FARMACI
+###############################################################################
+
+### 6. Farmaci Assistito - Recupera farmaci del paziente
+GET {{$dotenv BFF}}/v1/assistito/farmaci?dateStart=2024-01-01&dateEnd=2024-03-31&sort=ASC&column=data-prescrizione
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 6a. Farmaci Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/farmaci?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC&column=dispensationDate
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 7. Farmaci Professionista - Recupera farmaci del paziente (professionista)
+GET {{$dotenv BFF}}/v1/professionista/farmaci?dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC&column=prescriptionDate
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 7a. Farmaci Professionista con paginazione e colonna diversa
+# Colonne disponibili: prescriptionDate, dispensationDate, administrationDate, expirationDate
+# GET {{baseUrl}}/v1/professionista/farmaci?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC&column=expirationDate
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+
+
+### 8a. Eventi Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/eventi?count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
+
+
+### 9a. Dati Assistito con paginazione
+# GET {{baseUrl}}/v1/assistito/dati?name=Glicemia&count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+### 10. Dati Professionista - Recupera osservazioni del paziente (professionista)
+GET {{$dotenv BFF}}/v1/professionista/dati?name=Pressione Arteriosa&type=Dato&dateStart=2024-01-01&dateEnd=2024-12-31&sort=ASC
+Agid-JWT-Signature:  {{jwt_sub_eq_persid}}
+Content-Type: application/json
+
+### 10a. Dati Professionista con paginazione
+# GET {{baseUrl}}/v1/professionista/dati?name=Glicemia&type=Profilo clinico&count=10&offset=0&dateStart=2024-01-01&dateEnd=2024-12-31&sort=DESC
+# Agid-JWT-Signature:  {{jwt}}
+# Content-Type: application/json
+
+
