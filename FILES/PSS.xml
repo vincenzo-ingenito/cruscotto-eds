@@ -1371,7 +1371,7 @@
                             </text>
                             <effectiveTime xsi:type="IVL_TS">
                                 <low value="20260215000000+0100" />
-                                <high value="20260209000000+0100" />
+                                <high value="20260219000000+0100" />
                             </effectiveTime>
                             <effectiveTime operator="A" xsi:type="PIVL_TS"
                                 institutionSpecified="true">
