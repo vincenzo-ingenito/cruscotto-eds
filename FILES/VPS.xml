@@ -2,16 +2,16 @@
 	<realmCode code="IT"/>
 	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040UV02"/>
 	<templateId root="2.16.840.1.113883.2.9.10.1.6.1" extension="1.1" assigningAuthorityName="HL7 Italia"/>
-	<id root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.LCNLDE90L47H501Q.20220420112426.Q123E456" assigningAuthorityName="Regione Lazio"/>
+	<id root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.LCNLDE90L47H501Q.20260220112426.Q123E456" assigningAuthorityName="Regione Lazio"/>
 	<code code="59258-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Verbale di Pronto Soccorso">
 		<!--translation code="[CODICE_LOCALE]" codeSystem="[OID_SISTEMA_CODIFICA]" codeSystemName="[DESCRIZIONE_SISTEMA_CODIFICA]" displayName="Verbale di Pronto Soccorso"/-->
 	</code>
 	<title> VERBALE DI PRONTO SOCCORSO</title>
 	<sdtc:statusCode code="active"/>
-	<effectiveTime value="20220418123000+0100"/>
+	<effectiveTime value="20260218123000+0100"/>
 	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="HL7 Confidentiality" displayName="Normal"/>
 	<languageCode code="it-IT"/>
-	<setId root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.LCNLDE90L47H501Q.20220420112426.Q123E456" assigningAuthorityName="Regione Lazio"/>
+	<setId root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.LCNLDE90L47H501Q.20260220112426.Q123E456" assigningAuthorityName="Regione Lazio"/>
 	<versionNumber value="1"/>
 	<recordTarget>
 		<patientRole>
@@ -49,7 +49,7 @@
 		</patientRole>
 	</recordTarget>
 	<author>
-		<time value="20220417093000+0100"/>
+		<time value="20260217093000+0100"/>
 		<assignedAuthor>
 			<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 			<addr use="HP"> 
@@ -74,7 +74,7 @@
 		</assignedAuthor>
 	</author>
 	<dataEnterer typeCode="ENT">
-		<time value="20220417093500+0100"/>
+		<time value="20260217093500+0100"/>
 		<assignedEntity>
 			<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 			<addr>
@@ -113,7 +113,7 @@
 		</assignedCustodian>
 	</custodian>
 	<legalAuthenticator>
-		<time value="202201191546+0100"/>
+		<time value="202601191546+0100"/>
 		<signatureCode code="S"/>
 			<assignedEntity>
 				<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
@@ -161,8 +161,8 @@
 		<serviceEvent>
 			<code code="DIR" codeSystem="2.16.840.1.113883.2.9.5.1.4" codeSystemName="ActCode" displayName="Accesso Programmato (PS)"/>
 			<effectiveTime>
-				<low value="20220330112426+0100"/>
-				<high value="20220407112426+0100"/>
+				<low value="20260228112426+0100"/>
+				<high value="20260207112426+0100"/>
 			</effectiveTime>	
 			<performer typeCode="PRF">
 				<assignedEntity>
@@ -179,8 +179,8 @@
 	</documentationOf>
 	<!--relatedDocument typeCode="RPLC">
 		<parentDocument>
-			<id root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.TSTSMN63A01F205H.20220330112426.TSS1Tkju" assigningAuthorityName="Regione Lazio"/>
-			<setId root="2.16.840.1.113883.2.9.2.120.4.4" extension="c030702.TSTSMN63A01F205H.20220325112426.TSS1Tkju" assigningAuthorityName="Regione Lazio"/>
+			<id root="2.16.840.1.113883.2.9.2.120.4.4" extension="030702.TSTSMN63A01F205H.20260228112426.TSS1Tkju" assigningAuthorityName="Regione Lazio"/>
+			<setId root="2.16.840.1.113883.2.9.2.120.4.4" extension="c030702.TSTSMN63A01F205H.20260225112426.TSS1Tkju" assigningAuthorityName="Regione Lazio"/>
 			<versionNumber value="1"/> 
 		</parentDocument> 
 	</relatedDocument-->
@@ -188,8 +188,8 @@
 		<encompassingEncounter>
 			<id root="2.16.840.1.113883.2.9.2.120110.4.6" extension="2011008159" assigningAuthorityName="MEF"/>
 			<effectiveTime>
-				<low value="20220330112426+0100"/>
-				<high value="20220418101010+0200"/>
+				<low value="20260228112426+0100"/>
+				<high value="20260218101010+0200"/>
 			</effectiveTime>	
 			<responsibleParty typeCode="RESP">
 				<assignedEntity>
@@ -332,7 +332,7 @@
 								<reference value="#Note_Commenti"/>
 							</text>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220330101000+0100"/>
+							<effectiveTime value="20260228101000+0100"/>
 							<value xsi:type="CD" code="R" codeSystem="2.16.840.1.113883.2.9.6.1.54.4" codeSystemName="CodiceTriage_VPS" displayName="Rosso"/>
 							<performer typeCode="PRF">
 								<assignedEntity>
@@ -378,7 +378,7 @@
 						</table>
 					</text>
 					<author>
-						<time value="20220426090910+0100"/>
+						<time value="20260225090910+0100"/>
 						<assignedAuthor>
 							<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 							<assignedPerson>
@@ -406,7 +406,7 @@
 								</list>
 							</text>
 							<author>
-								<time value="20220428202020+0100"/>
+								<time value="20260225202020+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -422,8 +422,8 @@
 									<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
 									<statusCode code="completed"/>
 									<effectiveTime>
-										<low value="20220410101010+0100"/>
-										<high value="20220420101010+0100"/>
+										<low value="20260225101010+0100"/>
+										<high value="20260225101010+0100"/>
 									</effectiveTime>
 									<value xsi:type="CD" code="153.5" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9-CM" displayName="TUMORI MALIGNI DELL'APPENDICE"/>
 									<entryRelationship typeCode="REFR" inversionInd='false'> 
@@ -452,7 +452,7 @@
 								<organizer classCode="CLUSTER" moodCode="EVN">
 									<code code="10157-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Storia di malattie di membri familiari"/>
 									<statusCode code="completed"/>
-									<effectiveTime value="20220423101010+0100"/>
+									<effectiveTime value="20260223101010+0100"/>
 									<subject typeCode="SBJ">
 										<relatedSubject classCode="PRS">
 											<code code="MTH" codeSystem="2.16.840.1.113883.5.111" codeSystemName="RoleCode" displayName="Mother"/>
@@ -468,7 +468,7 @@
 												<reference value="#[REF_OBS]"/>
 											</text>
 											<statusCode code="completed"/>
-											<effectiveTime value="20220410101010+0100"/>
+											<effectiveTime value="20260225101010+0100"/>
 											<value xsi:type="CD" code="575.6" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD-9-CM" displayName="COLESTEROLOSI DELLA COLECISTI"/>
 											<entryRelationship typeCode="SUBJ">
 												<observation classCode="OBS" moodCode="EVN">
@@ -508,7 +508,7 @@
 								Turgore giugulare: assenteEdemi: assenti
 							</text>
 							<author>
-								<time value="20220425111111+0100"/>
+								<time value="20260225111111+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -535,7 +535,7 @@
 								Coumadin sec INR (range terapeutico 2-3)
 							</text>
 							<author>
-								<time value="20220425111111+0100"/>
+								<time value="20260225111111+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -561,7 +561,7 @@
 								</paragraph> 
 							</text>
 							<author>
-								<time value="20220425111111+0100"/>
+								<time value="20260225111111+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -577,8 +577,8 @@
 									<code nullFlavor="NA"/> 
 									<statusCode code="active"/>
 									<effectiveTime>
-										<low value="20220420101010+0100"/>
-										<!--high value="20220425202020+0100"/-->
+										<low value="20260225101010+0100"/>
+										<!--high value="20260225202020+0100"/-->
 									</effectiveTime>
 									<entryRelationship typeCode="SUBJ">
 										<observation classCode="OBS" moodCode="EVN"> 
@@ -588,8 +588,8 @@
 											</text>
 											<statusCode code="completed"/>
 											<effectiveTime>
-												<low value="20220415101010+0100"/>
-												<high value="20220419101010+0100"/>
+												<low value="20260225101010+0100"/>
+												<high value="20260225101010+0100"/>
 											</effectiveTime>
 											<value xsi:type="CD" code="ALG" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ObservationIntoleranceType" displayName="Allergy"/>
 											<participant typeCode="CSM">
@@ -611,8 +611,8 @@
 													</text>
 													<statusCode code="completed"/>
 													<effectiveTime>
-														<low value="20220419101010+0100"/>
-														<high value="20220423101010+0100"/>
+														<low value="20260219101010+0100"/>
+														<high value="20260223101010+0100"/>
 													</effectiveTime>
 													<value xsi:type="CD" code="477.2" codeSystem="2.16.840.1.113883.6.103" displayName="RINITE ALLERGICA DA PELI O FORFORA ANIMALE (GATTO)(CANE)" codeSystemName="ICD-9CM"> 
 														<originalText> 
@@ -677,7 +677,7 @@
 								</table>
 							</text>
 							<author>
-								<time value="20220426090910+0100"/>
+								<time value="20260226090910+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -719,14 +719,14 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.51"/>
 							<code code="V24.2" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9CM" displayName="Follow -up di routine"/>
 							<effectiveTime>
-								<low value="20220415090909+0100"/>
-								<high value="20220415160000+0100"/>
+								<low value="20260215090909+0100"/>
+								<high value="20260215160000+0100"/>
 							</effectiveTime>
 							<participant typeCode="ADM">
 							<!--Operatore/Medico di ammissione-->
 								<time>
-									<low value="20220415101010+0100"/>
-									<high value="20220415151515+0100"/>
+									<low value="20260215101010+0100"/>
+									<high value="20260215151515+0100"/>
 								</time>
 								<participantRole classCode="ROL">
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
@@ -741,8 +741,8 @@
 							<participant typeCode="ATND">
 							<!--Turnazione medica: medico che ha avuto in carico il paziente-->
 								<time>
-									<low value="20220415101010+0100"/>
-									<high value="20220415151515+0100"/>
+									<low value="20260215101010+0100"/>
+									<high value="20260215151515+0100"/>
 								</time>
 								<participantRole classCode="ROL">
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
@@ -757,8 +757,8 @@
 							<participant typeCode="DIS">
 							<!--Medico di dimissione-->
 								<time>
-									<low value="20220415101010+0100"/>
-									<high value="20220415151515+0100"/>
+									<low value="20260215101010+0100"/>
+									<high value="20260215151515+0100"/>
 								</time>
 								<participantRole classCode="ROL">
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
@@ -773,8 +773,8 @@
 							<participant typeCode="LOC">
 							<!--Collocazione Paziente-->
 								<time>
-									<low value="20220415101010+0100"/>
-									<high value="20220415151515+0100"/>
+									<low value="20260215101010+0100"/>
+									<high value="20260215151515+0100"/>
 								</time>
 								<participantRole>
 									<templateId root="2.16.840.1.113883.2.9.10.1.6.64"/>
@@ -791,7 +791,7 @@
 										<reference value="#[NOTE]"/>
 									</text>
 									<author>
-										<time value="20220420101010+0100"/>
+										<time value="20260220101010+0100"/>
 										<assignedAuthor>
 											<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 											<assignedPerson>
@@ -823,7 +823,7 @@
 						</paragraph>
 					</text>
 					<author>
-						<time value="20220416101010+0100"/>
+						<time value="20260216101010+0100"/>
 						<assignedAuthor>
 							<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 							<assignedPerson>
@@ -851,8 +851,8 @@
 						<observation classCode="OBS" moodCode="EVN"> 
 							<code code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem"/>
 							<effectiveTime>
-								<low value="20170101090000+0100"/> 
-								<high value="20170101103000+0100"/> 
+								<low value="20260101090000+0100"/> 
+								<high value="20260101103000+0100"/> 
 							</effectiveTime>
 							<value xsi:type="CD" code="97835-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Medical complication"/> 
 						</observation>
@@ -888,10 +888,10 @@
 							<code code="76645-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cardiac stress test EKG study"/>
 							<text>[descrizione elemento,esito consulenza]</text>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220417171717+0100"/> 
+							<effectiveTime value="20260217171717+0100"/> 
 							<!--esecutore della prestazione-->
 							<performer>
-								<time value="20220417171717+0100"/>
+								<time value="20260217171717+0100"/>
 								<assignedEntity>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -904,7 +904,7 @@
 							</performer>
 							<!--richiedente della prestazione-->
 							<participant typeCode="REF">
-								<time value="20220417101010+0100"/>
+								<time value="20260217101010+0100"/>
 								<participantRole>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<playingEntity>
@@ -938,7 +938,7 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.45"/>
 							<statusCode code="completed"/>
 							<performer>
-								<time value="20220420101010+0100"/>
+								<time value="20260220101010+0100"/>
 								<assignedEntity>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -950,7 +950,7 @@
 								</assignedEntity>
 							</performer>
 							<participant typeCode="REF">
-								<time value="20220420101010+0100"/>
+								<time value="20260220101010+0100"/>
 								<participantRole>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<playingEntity>
@@ -967,7 +967,7 @@
 									<templateId root="2.16.840.1.113883.2.9.10.1.6.46"/>
 									<code code="86524-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Type of assessment"/>
 									<statusCode code="completed"/>
-									<effectiveTime value="20220421101010+0100"/>
+									<effectiveTime value="20260221101010+0100"/>
 									<value xsi:type="ST">[ESITO_ACCERTAMENTO]</value>
 								</observation> 
 							</component>
@@ -1012,7 +1012,7 @@
 									<methodCode code="70962-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Body weight Measured"/>
 									<!--targetSiteCode code="[TRG_CODE]" codeSystem="[OID_CODESYSTEM]" codeSystemName="[DESC_CODESYSTEM]" displayName="[DESC_TARGET]"/-->
 									<performer>
-										<time value="20220421101010+0100"/>
+										<time value="20260221101010+0100"/>
 										<assignedEntity>
 											<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 											<assignedPerson>
@@ -1024,7 +1024,7 @@
 										</assignedEntity>
 									</performer>
 									<participant typeCode="REF">
-										<time value="20220421101010+0100"/>
+										<time value="20260221101010+0100"/>
 										<participantRole>
 											<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 											<playingEntity>
@@ -1046,7 +1046,7 @@
 									<value xsi:type="PQ" value="56" unit="bpm"/>
 									<interpretationCode code="L" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7 ObservationInterpretation" displayName="Low"/>
 									<performer>
-										<time value="20220421101010+0100"/>
+										<time value="20260221101010+0100"/>
 										<assignedEntity>
 											<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 											<assignedPerson>
@@ -1058,7 +1058,7 @@
 										</assignedEntity>
 									</performer>
 									<participant typeCode="REF">
-										<time value="20220421101010+0100"/>
+										<time value="20260221101010+0100"/>
 										<participantRole>
 											<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 											<playingEntity>
@@ -1098,8 +1098,8 @@
 							<statusCode code="completed"/>
 							<!--Periodo di inizio e fine della terapia-->
 							<effectiveTime xsi:type="IVL_TS">
-								<low value="20220421121122+0100"/>
-								<high value="20220426221122+0100"/>
+								<low value="20260221121122+0100"/>
+								<high value="20260226221122+0100"/>
 							</effectiveTime>
 							<!--Posologia – es. 2 volte al giorno-->
 							<effectiveTime operator="A" xsi:type="PIVL_TS" institutionSpecified="true"> 
@@ -1136,7 +1136,7 @@
 								</manufacturedProduct>
 							</consumable>
 							<performer>
-								<time value="20220402221122+0100"/>
+								<time value="20260202221122+0100"/>
 								<assignedEntity>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -1148,7 +1148,7 @@
 								</assignedEntity>
 							</performer>
 							<participant typeCode="REF">
-								<time value="20220301221122+0100"/>
+								<time value="20260201221122+0100"/>
 								<participantRole>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<playingEntity>
@@ -1216,7 +1216,7 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.66"/>
 							<code code="dimissione" codeSystem="2.16.840.1.113883.2.9.5.1.4"/>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220427101010+0100"/>
+							<effectiveTime value="20260227101010+0100"/>
 							<performer>
 								<assignedEntity>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
@@ -1235,12 +1235,12 @@
 									<id root="2.16.840.1.113883.2.9.2.120101.4.6" extension="999999"/>
 									<code code="IMP" codeSystem="2.16.840.1.113883.2.9.1.11.1.2.9" codeSystemName="TipoEncounterPostDimissione_VPS" displayName="inpatient"/>
 									<text><reference value="#[REF_1]"/></text>
-									<effectiveTime value="20220401101010+0100"/>									
+									<effectiveTime value="20260201101010+0100"/>									
 									<!--Collocazione paziente Post Dimissione-->
 									<participant typeCode="LOC">
 										<time>
-											<low value="20220410101010+0100"/>
-											<high value ="20220427101010+0100"/>
+											<low value="20260210101010+0100"/>
+											<high value ="20260227101010+0100"/>
 										</time>
 										<participantRole classCode="SDLOC">
 											<templateId root="2.16.840.1.113883.2.9.10.1.6.64"/>
@@ -1254,7 +1254,7 @@
 											<templateId root="2.16.840.1.113883.2.9.10.1.6.68"/>
 											<code code="1" codeSystem="2.16.840.1.113883.2.9.1.11.1.2.13" codeSystemName="ProblemType_VPS" displayName="In continuità di soccorso"/>
 											<statusCode code="completed"/>
-											<effectiveTime value="20220428101010+0100"/>
+											<effectiveTime value="20260228101010+0100"/>
 											<value xsi:type="ST">[DETTAGLIO_CAUSA_TRASFERIMENTO]</value>
 										</observation>
 									</entryRelationship>
@@ -1266,12 +1266,12 @@
 									<templateId root="2.16.840.1.113883.2.9.10.1.6.92"/>
 									<code nullFlavor="NA"/>
 									<text><reference value="#[REF_1]"/></text>
-									<effectiveTime value="20220427101010+0100"/>
+									<effectiveTime value="20260227101010+0100"/>
 									<!--Collocazione paziente Post Dimissione-->
 									<participant typeCode="LOC">
 										<time>
-											<low value="20220427101010+0100"/>
-											<high value ="20220506101010+0100"/>
+											<low value="20260227101010+0100"/>
+											<high value ="20260206101010+0100"/>
 										</time>
 										<participantRole classCode="SDLOC">
 											<templateId root="2.16.840.1.113883.2.9.10.1.6.64"/>
@@ -1285,7 +1285,7 @@
 												<templateId root="2.16.840.1.113883.2.9.10.1.6.68"/>
 												<code code="1" codeSystem="2.16.840.1.113883.2.9.1.11.1.2.13" codeSystemName="ProblemType_VPS" displayName="In continuità di soccorso"/>
 												<statusCode code="completed"/>
-												<effectiveTime value="20220506101010+0100"/>
+												<effectiveTime value="20260206101010+0100"/>
 												<value xsi:type="ST">[DETTAGLIO_CAUSA_TRASFERIMENTO]</value>
 										</observation>
 									</entryRelationship>
@@ -1297,7 +1297,7 @@
 									<templateId root="2.16.840.1.113883.2.9.10.1.6.70"/>
 									<code code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosi"/>
 									<statusCode code="completed"/>
-									<effectiveTime value="20220427101010+0100"/>
+									<effectiveTime value="20260227101010+0100"/>
 									<value xsi:type="CD" code="162.3" codeSystem="2.16.840.1.113883.6.103" codeSystemName="ICD9-CM" displayName="Tumore del solco polmonare"/>
 								</observation>
 							</entryRelationship>							
@@ -1318,7 +1318,7 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.66"/>
 							<code code="75328-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Prognosi"/>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220427171717+0100"/>
+							<effectiveTime value="20260227171717+0100"/>
 							<value xsi:type="ST">[PROGNOSI]</value>
 						</observation> 
 					</entry>					
@@ -1328,7 +1328,7 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.72"/>
 							<code code="11283-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Valutazione Acutezza"/>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220427171717+0100"/>
+							<effectiveTime value="20260227171717+0100"/>
 							<value xsi:type="CD" code="R" codeSystem="2.16.840.1.113883.2.9.6.1.54.4" codeSystemName="CodiceTriage_VPS" displayName="Rosso - Molto critico"/>
 						</observation> 
 					</entry>
@@ -1338,7 +1338,7 @@
 							<templateId root="2.16.840.1.113883.2.9.10.1.6.86"/>
 							<code code="31211-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Date of death"/>
 							<statusCode code="completed"/>
-							<effectiveTime value="20220530101010+0100"/>
+							<effectiveTime value="20260228101010+0100"/>
 						</observation> 
 					</entry> 
 					<!--richiesta autopsia-->
@@ -1371,7 +1371,7 @@
 						</list>
 					</text>
 					<author>
-						<time value="20220428101010+0100"/>
+						<time value="20260228101010+0100"/>
 						<assignedAuthor>
 							<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 							<assignedPerson>
@@ -1388,7 +1388,7 @@
 							<code code="27536-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Cardiac rehabilitation treatment plan"/>
 							<statusCode code="active"/>
 							<author>
-								<time value="20220428101010+0100"/>
+								<time value="20260228101010+0100"/>
 								<assignedAuthor>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<assignedPerson>
@@ -1424,7 +1424,7 @@
 						Dal 1/7 al 7/7: Coumadin sec INR (range terapeutico 2-3)
 					</text>
 					<author>
-						<time value="20220428101010+0100"/>
+						<time value="20260228101010+0100"/>
 						<assignedAuthor>
 							<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 							<assignedPerson>
@@ -1444,8 +1444,8 @@
 							<statusCode code="active"/>
 							<!--Periodo di inizio e fine della terapia (OBBLIGATORIO)-->
 							<effectiveTime xsi:type="IVL_TS">
-								<low value="20220425121122+0100"/>
-								<high value="20220707221122+0100"/>
+								<low value="20260225121122+0100"/>
+								<high value="20260207221122+0100"/>
 							</effectiveTime>
 							<!--Posologia – es. 2 volte al giorno (OPZIONALE)-->
 							<effectiveTime operator="A" xsi:type="PIVL_TS" institutionSpecified="true">
@@ -1482,7 +1482,7 @@
 								</manufacturedProduct>
 							</consumable>
 							<participant typeCode="REF">
-								<time value="20220426221122+0100"/>
+								<time value="20260226221122+0100"/>
 								<participantRole>
 									<id root="2.16.840.1.113883.2.9.4.3.2" extension="PROVAX00X00X000Y" assigningAuthorityName="MEF"/>
 									<playingEntity>
