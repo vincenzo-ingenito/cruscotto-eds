@@ -1695,8 +1695,8 @@
                             <!--Periodo
                             di inizio e fine della terapia (OBBLIGATORIO)-->
                             <effectiveTime xsi:type="IVL_TS">
-                                <low value="20260225121122+0100" />
-                                <high value="20260207221122+0100" />
+                                <low value="20260220121122+0100" />
+                                <high value="20260225221122+0100" />
                             </effectiveTime>
                             <!--Posologia
                             – es. 2 volte al giorno (OPZIONALE)-->
