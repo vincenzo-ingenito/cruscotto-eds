@@ -134,7 +134,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "PRE",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
@@ -216,7 +216,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "REF",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
@@ -294,7 +294,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "SUM",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
@@ -520,7 +520,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "VRB",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
