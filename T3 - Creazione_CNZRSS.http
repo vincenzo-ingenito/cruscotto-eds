@@ -392,6 +392,84 @@ GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_pss}}&_
 Cache-Control: no-cache
 
 #############################################################################
+# 3.8.TC - PUBBLICAZIONE DOCUMENTO PSS 2
+#############################################################################
+# @name uuid
+GET https://currentmillis.com/time/minutes-since-unix-epoch.php
+###
+@system=2.16.840.1.113883.2.9.2.110.4.4
+@uuid_pss={{uuid.response.body.*}}
+@masterIdentifier_pss={{system}}^{{uuid_pss}}
+
+#############################################################################
+# 3.9 Validazione Documento PSS
+#############################################################################
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_GRUPPO_CNZRSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_GRUPPO_CNZRSS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "healthDataFormat": "CDA",
+  "mode": "ATTACHMENT",
+  "activity": "VALIDATION"
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/PSS_gruppoSan.pdf" 
+Content-Type: application/octet-stream
+
+< ./cruscotto-ed/FILES/PSS_gruppoSan.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+#############################################################################
+# 4.1. Pubblicazione Documento PSS.pdf
+#############################################################################
+# @name publication
+POST {{$dotenv GTW_DISPATCHER}}/v1/documents
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_GRUPPO_CNZRSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_GRUPPO_CNZRSS}}
+content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="requestBody";
+Content-Type: application/json
+
+{
+  "tipologiaStruttura": "Ospedale",
+  "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
+  "tipoDocumentoLivAlto": "SUM",
+  "assettoOrganizzativo": "AD_PSC001",
+  "conservazioneANorma": "string",
+  "tipoAttivitaClinica": "PHR",
+  "identificativoSottomissione": "string",
+  "healthDataFormat": "CDA", 
+  "mode": "ATTACHMENT", 
+  "identificativoDoc": "{{masterIdentifier_pss}}",
+  "identificativoRep": "2.16.840.1.113883.2.9.2.150.4.5.1",
+  "priorita":false
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="file/PSS_gruppoSan.pdf" 
+Content-Type: application/octet-stream
+
+< ./cruscotto-ed/FILES/PSS_gruppoSan.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+  
+#############################################################################
+# 4.2. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# EXPECTED: 1 record
+#############################################################################
+# @name documentReferenceCreate
+GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_pss}}&_include=DocumentReference:subject
+Cache-Control: no-cache
+
+#############################################################################
 # 4.7. Creazione di random masterIdentifier
 #############################################################################
 # @name uuid
