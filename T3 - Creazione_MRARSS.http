@@ -1,7 +1,6 @@
 #############################################################################
 # 1.TC - PUBBLICAZIONE DOCUMENTO CERT_VACC
 #############################################################################
-
 #############################################################################
 # 1. Creazione di random masterIdentifier
 #############################################################################
@@ -16,7 +15,8 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 # 1.2. Validazione Documento CERT_VACC
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -30,10 +30,10 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_1.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/CERT_VACC_1.pdf
+< ./cruscotto-ed/FILES/CERT_VACC_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
@@ -41,7 +41,8 @@ Content-Type: application/octet-stream
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_CERT_VACC_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -51,7 +52,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "VAC",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
@@ -64,10 +65,10 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_1.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/CERT_VACC_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/CERT_VACC_1.pdf
+< ./FILES/CERT_VACC_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
@@ -79,7 +80,7 @@ GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_cert_va
 Cache-Control: no-cache
 
 #############################################################################
-# 2.TC - PUBBLICAZIONE DOCUMENTO EROGAZIONE FARMACEUTICA
+# 1.9 TC - PUBBLICAZIONE DOCUMENTO EROGAZIONE FARMACEUTICA
 #############################################################################
 
 #############################################################################
@@ -96,7 +97,8 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 # 2.1 Validazione Documento EROG_FR
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -110,10 +112,10 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/ErogazioneFr.pdf" 
+Content-Disposition: form-data; name="file"; filename="FILES/ErogazioneFr_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/ErogazioneFr.pdf
+< ./cruscotto-ed/FILES/ErogazioneFr_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
@@ -121,7 +123,8 @@ Content-Type: application/octet-stream
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_ER_FR_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -144,10 +147,10 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/ErogazioneFr.pdf" 
+Content-Disposition: form-data; name="file"; filename="FILES/ErogazioneFr_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/ErogazioneFr.pdf
+< ./cruscotto-ed/FILES/ErogazioneFr_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
@@ -159,11 +162,11 @@ GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_er_fr}}
 Cache-Control: no-cache
 
 #############################################################################
-# 3.TC - PUBBLICAZIONE DOCUMENTO LAB
+# 2.8.TC - PUBBLICAZIONE DOCUMENTO LAB
 #############################################################################
 
 #############################################################################
-# 3. Creazione di random masterIdentifier
+# 2.9. Creazione di random masterIdentifier
 #############################################################################
 # @name uuid
 GET https://currentmillis.com/time/minutes-since-unix-epoch.php
@@ -176,7 +179,8 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 # 3.1 Validazione Documento LAB
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -190,10 +194,10 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/LAB.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/LAB_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/LAB.pdf
+< ./cruscotto-ed/FILES/LAB_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
@@ -201,7 +205,8 @@ Content-Type: application/octet-stream
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_LAB_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -224,14 +229,14 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/LAB.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/LAB_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/LAB.pdf
+< ./cruscotto-ed/FILES/LAB_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
   
 #############################################################################
-# 3.4. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# 3.3. Recupero DocumentReference con paziente cryptato sul Server FHIR
 # EXPECTED: 1 record
 #############################################################################
 # @name documentReferenceCreate
@@ -239,10 +244,7 @@ GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_lab}}&_
 Cache-Control: no-cache
 
 #############################################################################
-# 4.TC - PUBBLICAZIONE DOCUMENTO PSS
-#############################################################################
-#############################################################################
-# 4. Creazione di random masterIdentifier
+# 3.8.TC - PUBBLICAZIONE DOCUMENTO PSS
 #############################################################################
 # @name uuid
 GET https://currentmillis.com/time/minutes-since-unix-epoch.php
@@ -252,10 +254,11 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 @masterIdentifier_pss={{system}}^{{uuid_pss}}
 
 #############################################################################
-# 4.1 Validazione Documento PSS
+# 3.9 Validazione Documento PSS
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -269,18 +272,19 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/PSS.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/PSS_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/PSS.pdf
+< ./cruscotto-ed/FILES/PSS_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
-# 4.2. Pubblicazione Documento PSS.pdf
+# 4.1. Pubblicazione Documento PSS.pdf
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -303,14 +307,14 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/PSS.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/PSS_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/PSS.pdf
+< ./cruscotto-ed/FILES/PSS_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
   
 #############################################################################
-# 4.4. Recupero DocumentReference con paziente cryptato sul Server FHIR
+# 4.2. Recupero DocumentReference con paziente cryptato sul Server FHIR
 # EXPECTED: 1 record
 #############################################################################
 # @name documentReferenceCreate
@@ -318,11 +322,7 @@ GET {{$dotenv UAR_FHIR_SERVER}}/fhir/DocumentReference?identifier={{uuid_pss}}&_
 Cache-Control: no-cache
 
 #############################################################################
-# 5.TC - PUBBLICAZIONE DOCUMENTO VPS
-#############################################################################
-
-#############################################################################
-# 5. Creazione di random masterIdentifier
+# 4.7. Creazione di random masterIdentifier
 #############################################################################
 # @name uuid
 GET https://currentmillis.com/time/minutes-since-unix-epoch.php
@@ -332,10 +332,11 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 @masterIdentifier_vps = {{system}}^{{uuid_vps}}
 
 #############################################################################
-# 5.1 Validazione Documento VPS
+# 4.8. Validazione Documento VPS
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -349,18 +350,19 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/VPS.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/VPS_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/VPS.pdf
+< ./cruscotto-ed/FILES/VPS_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
-# 5.2. Pubblicazione Documento VPS.pdf
+# 4.9. Pubblicazione Documento VPS.pdf
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS_MRARSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_VPS_MRARSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -383,14 +385,14 @@ Content-Type: application/json
 }
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="file/VPS.pdf" 
+Content-Disposition: form-data; name="file"; filename="file/VPS_MRARSS.pdf" 
 Content-Type: application/octet-stream
 
-< ./FILES/VPS.pdf
+< ./cruscotto-ed/FILES/VPS_MRARSS.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 #############################################################################
-# 5.4. Recupero DocumentReference con paziente cryptato sul Server FHIR CAMPANIA
+# 4.10 Recupero DocumentReference con paziente cryptato sul Server FHIR CAMPANIA
 # EXPECTED: 1 record
 #############################################################################
 # @name documentReferenceCreate
