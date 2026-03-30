@@ -327,8 +327,8 @@ GET https://currentmillis.com/time/minutes-since-unix-epoch.php
 # 3.9 Validazione Documento PSS
 #############################################################################
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents/validation
-FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_CNZRSS}}
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_CNZRSS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS2_CNZRSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS2_CNZRSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -353,8 +353,8 @@ Content-Type: application/octet-stream
 #############################################################################
 # @name publication
 POST {{$dotenv GTW_DISPATCHER}}/v1/documents
-FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_CNZRSS}}
-GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS_CNZRSS}}
+FSE-JWT-Signature: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS2_CNZRSS}}
+GovWay-ModI-Info: {{$dotenv CREATE_FSE_JWT_SIGNATURE_PSS2_CNZRSS}}
 content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -364,7 +364,7 @@ Content-Type: application/json
 {
   "tipologiaStruttura": "Ospedale",
   "attiCliniciRegoleAccesso": [ "PUBLICPOL" ],
-  "tipoDocumentoLivAlto": "WOR",
+  "tipoDocumentoLivAlto": "SUM",
   "assettoOrganizzativo": "AD_PSC001",
   "conservazioneANorma": "string",
   "tipoAttivitaClinica": "PHR",
